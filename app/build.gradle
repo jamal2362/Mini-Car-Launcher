@@ -14,7 +14,7 @@ android {
         versionCode 10
         versionName '1.0'
         resConfigs 'en', 'de'
-        setProperty("archivesBaseName", 'minicarlauncher_' + versionName)
+        setProperty("archivesBaseName", 'Mini_Car_Launcher_' + versionName)
     }
 
     kotlinOptions {
