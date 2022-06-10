@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Accent color -->
+    <color name="accent_color">#FF42A5F5</color>
+
+    <!-- Shortcut background color -->
+    <color name="shortcut_button">#A80D47A1</color>
+
+    <!-- App background color -->
+    <color name="background_color">#FF262529</color>
+
+    <!-- Dialog button color -->
+    <color name="background_pressed">#200D47A1</color>
+    <color name="background_selected">#620D47A1</color>
+    <color name="background_no_selected">#26000000</color>
+
+    <!-- Google Assistant color -->
+    <color name="google_blue">#FF4285F4</color>
+    <color name="google_green">#FF34A853</color>
+    <color name="google_red">#FFEA4335</color>
+    <color name="google_yellow">#FFFBBC05</color>
+
+</resources>

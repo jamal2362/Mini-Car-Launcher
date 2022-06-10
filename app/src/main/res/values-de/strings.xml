@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Name -->
+    <string name="app_name">Mini Car Launcher</string>
+
+    <!-- Menu Items -->
+    <string name="menu_manage_applications">Anwendungen verwalten</string>
+    <string name="menu_open_assistant">Assistant öffnen</string>
+    <string name="menu_open_settings">Systemeinstellungen öffnen</string>
+    <string name="menu_set_wallpaper">Hintergrundbild festlegen</string>
+
+    <!-- Apps Dialog -->
+    <string name="dialog_application_selected_title">Eine Anwendung ausgewählt</string>
+    <string name="dialog_applications_selected_title">%1$d Anwendungen ausgewählt</string>
+    <string name="dialog_no_applications_selected_title">Keine Anwendung ausgewählt</string>
+
+    <!-- Snackbar -->
+    <string name="snackbar_app_unavailable">Es scheint, dass diese Anwendung nicht mehr verfügbar ist</string>
+
+    <!-- Main Page -->
+    <string name="select_apps_using_toolbar_menu">Anwendungen über das Symbol \"Apps\" in der Symbolleiste auswählen</string>
+</resources>

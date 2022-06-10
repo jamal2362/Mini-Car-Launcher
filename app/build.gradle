@@ -1,0 +1,69 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+
+    compileSdkVersion 32
+    buildToolsVersion '32.0.0'
+
+    defaultConfig {
+        applicationId "com.jamal2367.minicarlauncher"
+        minSdkVersion 21
+        targetSdkVersion 32
+        versionCode 10
+        versionName '1.0'
+        resConfigs 'en', 'de'
+        setProperty("archivesBaseName", 'minicarlauncher_' + versionName)
+    }
+
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    // Kotlin //
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
+
+    // Google Material //
+    implementation 'com.google.android.material:material:1.7.0-alpha02'
+
+    // Google Dagger //
+    implementation "com.google.dagger:dagger-android-support:2.42"
+    kapt "com.google.dagger:dagger-compiler:2.42"
+    kapt "com.google.dagger:dagger-android-processor:2.42"
+
+    // Android X //
+    implementation "androidx.room:room-rxjava2:2.4.2"
+    kapt "androidx.room:room-compiler:2.4.2"
+
+    // RXJava2 //
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+}
