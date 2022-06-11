@@ -72,7 +72,6 @@ class LauncherFragment : DaggerFragment(), LauncherView {
             R.id.action_change_items -> presenter.onShowAppsClick()
             R.id.action_open_assistant -> presenter.onOpenAssistant(requireContext())
             R.id.action_open_settings -> presenter.onOpenSettings(requireContext())
-            R.id.action_set_wallpaper -> presenter.onSetWallpaper(requireContext())
             R.id.action_web_search -> presenter.onWebSearch(requireContext())
         }
         return false
@@ -85,6 +84,7 @@ class LauncherFragment : DaggerFragment(), LauncherView {
     override fun toggleNoShortcutsPane(show: Boolean) {
         binding.llEmptyHint.visibility = if (show) View.VISIBLE else View.GONE
         binding.llEmptyHint1.visibility = if (show) View.VISIBLE else View.GONE
+        binding.llEmptyHint2.visibility = if (show) View.VISIBLE else View.GONE
     }
 
     override fun showAppsSelector(data: Collection<Shortcut>, maxItemsCount: Int) {

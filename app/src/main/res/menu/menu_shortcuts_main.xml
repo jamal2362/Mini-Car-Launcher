@@ -5,21 +5,15 @@
     tools:ignore="AlwaysShowAction">
 
     <item
-        android:id="@+id/action_open_settings"
-        android:icon="@drawable/ic_settings"
-        android:title="@string/menu_open_settings"
-        app:showAsAction="never" />
-
-    <item
-        android:id="@+id/action_set_wallpaper"
-        android:icon="@drawable/ic_settings"
-        android:title="@string/menu_set_wallpaper"
-        app:showAsAction="never" />
-
-    <item
         android:id="@+id/action_open_assistant"
         android:icon="@drawable/ic_assistant"
         android:title="@string/menu_open_assistant"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_open_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/menu_open_settings"
         app:showAsAction="always" />
 
     <item

@@ -7,7 +7,6 @@
     <string name="menu_manage_applications">Anwendungen verwalten</string>
     <string name="menu_open_assistant">Assistant öffnen</string>
     <string name="menu_open_settings">Systemeinstellungen öffnen</string>
-    <string name="menu_set_wallpaper">Hintergrundbild festlegen</string>
 
     <!-- Apps Dialog -->
     <string name="dialog_application_selected_title">Eine Anwendung ausgewählt</string>

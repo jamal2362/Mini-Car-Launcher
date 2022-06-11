@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.jamal2367.minicarlauncher"
-        minSdkVersion 21
+        minSdkVersion 27
         targetSdkVersion 32
         versionCode 10
         versionName '1.0'

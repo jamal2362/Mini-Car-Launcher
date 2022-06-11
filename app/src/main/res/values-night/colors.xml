@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Background color -->
+    <color name="background_color">#FF1F2630</color>
+
+    <!-- Accent color -->
+    <color name="accent_color">#FF64B5F6</color>
+
+    <!-- Shortcut background color -->
+    <color name="shortcut_button">#FF2E3948</color>
+
+    <!-- Dialog button color -->
+    <color name="background_pressed">#662E3948</color>
+    <color name="background_selected">#FF2E3948</color>
+</resources>

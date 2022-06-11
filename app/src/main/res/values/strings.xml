@@ -7,7 +7,6 @@
     <string name="menu_manage_applications">Manage applications</string>
     <string name="menu_open_assistant">Open assistant</string>
     <string name="menu_open_settings">Open system settings</string>
-    <string name="menu_set_wallpaper">Set wallpaper</string>
 
     <!-- Apps Dialog -->
     <string name="dialog_application_selected_title">One application selected</string>

@@ -99,10 +99,6 @@ class LauncherPresenter
         context.startActivity(Intent(Intent.ACTION_VOICE_COMMAND).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
     }
 
-    fun onSetWallpaper(context: Context) {
-        context.startActivity(Intent(Intent.ACTION_SET_WALLPAPER))
-    }
-
     fun onWebSearch(context: Context) {
         context.startActivity(Intent(Intent.ACTION_WEB_SEARCH))
     }

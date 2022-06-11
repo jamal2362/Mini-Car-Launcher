@@ -25,7 +25,7 @@
 
         <TextView
             android:id="@+id/tv_shortcut_label"
-            style="@style/TextMedium"
+            style="@style/TextMediumCard"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
