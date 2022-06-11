@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Background color -->
-    <color name="background_color">#FFD8E5fB</color>
-
     <!-- Accent color -->
     <color name="accent_color">#FF1976D2</color>
 
-    <!-- Shortcut background color -->
-    <color name="shortcut_button">#FF6D9DF1</color>
+    <!-- Background color -->
+    <color name="background_color">#FFEBF1F8</color>
 
     <!-- Dialog button color -->
     <color name="background_pressed">#150D47A1</color>
     <color name="background_selected">#300D47A1</color>
+
+    <!-- Shortcut background color -->
+    <color name="shortcut_button">#FFBBDEFB</color>
+
+    <!-- Shortcut outline background color -->
+    <color name="shortcut_outline">#FF9ED0F9</color>
 
     <!-- Google Assistant color -->
     <color name="google_blue">#FF4285F4</color>

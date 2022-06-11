@@ -1,12 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
-        <shape
-            android:innerRadius="24dp"
-            android:shape="rectangle">
-            <corners android:radius="24dp" />
+        <shape android:shape="oval">
             <solid android:color="@color/shortcut_button" />
             <stroke android:width="3dp" android:color="@color/shortcut_outline"/>
         </shape>
     </item>
+
+    <item
+        android:left="6dp"
+        android:right="6dp"
+        android:top="6dp"
+        android:bottom="6dp"
+        android:drawable="@drawable/ic_settings" />
 </layer-list>

@@ -4,9 +4,10 @@
     <string name="app_name">Mini Car Launcher</string>
 
     <!-- Menu Items -->
-    <string name="menu_manage_applications">Manage applications</string>
-    <string name="menu_open_assistant">Open assistant</string>
-    <string name="menu_open_settings">Open system settings</string>
+    <string name="menu_open_applications">Applications</string>
+    <string name="menu_open_assistant">Google Assistant</string>
+    <string name="menu_open_settings">System settings</string>
+    <string name="menu_open_web_search">Web search</string>
 
     <!-- Apps Dialog -->
     <string name="dialog_application_selected_title">One application selected</string>

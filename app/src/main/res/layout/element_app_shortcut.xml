@@ -15,7 +15,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="30dp"
-            android:layout_marginBottom="35dp"
+            android:layout_marginBottom="45dp"
             android:contentDescription="@null"
             android:src="@android:drawable/stat_sys_warning"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -6,25 +6,25 @@
 
     <item
         android:id="@+id/action_open_assistant"
-        android:icon="@drawable/ic_assistant"
+        android:icon="@drawable/ic_assistant_oval"
         android:title="@string/menu_open_assistant"
         app:showAsAction="always" />
 
     <item
+        android:id="@+id/action_web_search"
+        android:icon="@drawable/ic_web_search_oval"
+        android:title="@string/menu_open_web_search"
+        app:showAsAction="always" />
+
+    <item
         android:id="@+id/action_open_settings"
-        android:icon="@drawable/ic_settings"
+        android:icon="@drawable/ic_settings_oval"
         android:title="@string/menu_open_settings"
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/action_web_search"
-        android:icon="@drawable/ic_web_search"
-        android:title="@string/menu_manage_applications"
-        app:showAsAction="always" />
-
-    <item
         android:id="@+id/action_change_items"
-        android:icon="@drawable/ic_all_apps"
-        android:title="@string/menu_manage_applications"
+        android:icon="@drawable/ic_all_apps_oval"
+        android:title="@string/menu_open_applications"
         app:showAsAction="always" />
 </menu>
