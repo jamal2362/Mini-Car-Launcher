@@ -11,8 +11,8 @@ android {
         applicationId "com.jamal2367.minicarlauncher"
         minSdkVersion 27
         targetSdkVersion 32
-        versionCode 20
-        versionName '2.0'
+        versionCode 30
+        versionName '3.0'
         resConfigs 'en', 'de'
         setProperty("archivesBaseName", 'Mini_Car_Launcher_' + versionName)
     }
