@@ -2,14 +2,16 @@
     <item>
         <shape android:shape="oval">
             <solid android:color="@color/shortcut_button" />
-            <stroke android:width="3dp" android:color="@color/shortcut_outline"/>
+            <stroke
+                android:width="3dp"
+                android:color="@color/shortcut_outline" />
         </shape>
     </item>
 
     <item
+        android:bottom="6dp"
+        android:drawable="@drawable/ic_web_search"
         android:left="6dp"
         android:right="6dp"
-        android:top="6dp"
-        android:bottom="6dp"
-        android:drawable="@drawable/ic_web_search" />
+        android:top="6dp" />
 </layer-list>

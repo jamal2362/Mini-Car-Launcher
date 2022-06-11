@@ -6,7 +6,9 @@
             android:shape="rectangle">
             <corners android:radius="24dp" />
             <solid android:color="@color/shortcut_button" />
-            <stroke android:width="3dp" android:color="@color/shortcut_outline"/>
+            <stroke
+                android:width="3dp"
+                android:color="@color/shortcut_outline" />
         </shape>
     </item>
 </layer-list>
