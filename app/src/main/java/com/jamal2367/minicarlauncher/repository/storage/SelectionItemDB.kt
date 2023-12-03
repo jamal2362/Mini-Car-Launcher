@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.jamal2367.minicarlauncher.repository.entities.SelectionItem
 
-@Database(entities = [SelectionItem::class], version = 1)
+@Database(entities = [SelectionItem::class], version = 1, exportSchema = false)
 abstract class SelectionItemDB : RoomDatabase() {
     companion object {
         private const val DB_NAME = "SelectionItem.db"
