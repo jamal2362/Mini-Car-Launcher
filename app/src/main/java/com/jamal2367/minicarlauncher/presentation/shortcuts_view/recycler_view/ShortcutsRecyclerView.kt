@@ -60,7 +60,7 @@ class ShortcutsRecyclerView(private val ctx: Context, attrs: AttributeSet?) :
             super.getItemOffsets(outRect, view, parent, state)
 
             outRect.apply {
-                if (parent.getChildAdapterPosition(view) == 0) {
+                if (parent.getChildAdapterPosition(view) < 0) {
                     left = itemMargin
                 }
 
@@ -69,8 +69,8 @@ class ShortcutsRecyclerView(private val ctx: Context, attrs: AttributeSet?) :
                 bottom = itemMargin
             }
 
-            val itemWidth = (parent.measuredWidth - parent.paddingLeft - parent.paddingRight) / 5
-            view.layoutParams.width = itemWidth - itemMargin - (itemMargin / itemsPerScreen) + 1
+            val itemWidth = (parent.measuredWidth - parent.paddingLeft - parent.paddingRight) / 4
+            view.layoutParams.width = itemWidth - itemMargin - (itemMargin / itemsPerScreen) + 2
         }
     }
 }
