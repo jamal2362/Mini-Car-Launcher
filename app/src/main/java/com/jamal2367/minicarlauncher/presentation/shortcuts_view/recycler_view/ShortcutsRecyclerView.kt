@@ -55,8 +55,7 @@ class ShortcutsRecyclerView(private val ctx: Context, attrs: AttributeSet?) :
         override fun canScrollHorizontally() = true
     }
 
-    private class ShortcutsDecorator(private val itemsPerScreen: Int, private val itemMargin: Int) :
-        RecyclerView.ItemDecoration() {
+    private class ShortcutsDecorator(private val itemsPerScreen: Int, private val itemMargin: Int) : ItemDecoration() {
         override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: State) {
             super.getItemOffsets(outRect, view, parent, state)
 
@@ -65,7 +64,7 @@ class ShortcutsRecyclerView(private val ctx: Context, attrs: AttributeSet?) :
                     left = itemMargin
                     top = itemMargin
                 }
-                
+
                 right = itemMargin
                 bottom = itemMargin
             }

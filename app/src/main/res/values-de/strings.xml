@@ -12,7 +12,7 @@
     <!-- Apps Dialog -->
     <string name="dialog_application_selected_title">Eine Anwendung ausgewählt</string>
     <string name="dialog_applications_selected_title">%1$d Anwendungen ausgewählt</string>
-    <string name="dialog_no_applications_selected_title">Keine Anwendung ausgewählt</string>
+    <string name="dialog_no_applications_selected_title">Keine Anwendungen ausgewählt</string>
 
     <!-- Snackbar -->
     <string name="snackbar_app_unavailable">Es scheint, dass diese Anwendung nicht mehr verfügbar ist</string>

@@ -57,7 +57,7 @@ class SelectorDialog : DialogFragment() {
 
     private fun getTitleWithSelectedCount(): String =
         if (currentSelectionsCount < 1) {
-            resources.getString(R.string.dialog_no_applications_selected_title, currentSelectionsCount)
+            resources.getString(R.string.dialog_no_applications_selected_title)
         } else if (currentSelectionsCount > 1) {
             resources.getString(R.string.dialog_applications_selected_title, currentSelectionsCount)
         } else {
