@@ -4,15 +4,18 @@
     <color name="accent_color">@android:color/system_accent1_600</color>
 
     <!-- Background color -->
-    <color name="background_color">@android:color/system_neutral2_50</color>
+    <color name="background_color">@android:color/system_neutral2_10</color>
 
     <!-- Dialog button color -->
     <color name="background_pressed">@android:color/system_neutral2_100</color>
     <color name="background_selected">@android:color/system_neutral2_200</color>
 
     <!-- Shortcut background color -->
-    <color name="shortcut_button">@android:color/system_accent1_100</color>
+    <color name="shortcut_button">#4DFFFFFF</color>
 
     <!-- Shortcut outline background color -->
-    <color name="shortcut_outline">@android:color/system_accent1_200</color>
+    <color name="shortcut_outline">#80000000</color>
+
+    <!-- Text color -->
+    <color name="text_color">@android:color/system_neutral2_800</color>
 </resources>

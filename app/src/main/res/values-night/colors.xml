@@ -11,8 +11,11 @@
     <color name="background_color">#FF1F2630</color>
 
     <!-- Shortcut background color -->
-    <color name="shortcut_button">#FF2E3948</color>
+    <color name="shortcut_button">#4D000000</color>
 
     <!-- Shortcut outline background color -->
-    <color name="shortcut_outline">#FF3B495D</color>
+    <color name="shortcut_outline">#80FFFFFF</color>
+
+    <!-- Text color -->
+    <color name="text_color">#FFC5C6D0</color>
 </resources>

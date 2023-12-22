@@ -3,9 +3,10 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/accent_color</item>
-        <item name="android:windowBackground">@color/background_color</item>
-        <item name="android:statusBarColor">@color/background_color</item>
-        <item name="android:navigationBarColor">@color/background_color</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowShowWallpaper">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:windowLightNavigationBar">true</item>
         <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.MaterialAlertDialog</item>
@@ -25,6 +26,7 @@
 
     <style name="ToolbarTextAppearance" parent="@android:style/TextAppearance">
         <item name="android:textSize">40sp</item>
+        <item name="android:textColor">@color/text_color</item>
     </style>
 
     <style name="TextMediumDialog">
@@ -43,7 +45,7 @@
     <style name="TextMediumCard">
         <item name="android:textSize">16sp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">?attr/colorControlNormal</item>
+        <item name="android:textColor">@color/text_color</item>
         <item name="android:textAlignment">center</item>
         <item name="android:ellipsize">end</item>
         <item name="android:text">@android:string/untitled</item>

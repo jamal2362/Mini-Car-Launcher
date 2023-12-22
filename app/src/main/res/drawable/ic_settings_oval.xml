@@ -3,7 +3,7 @@
         <shape android:shape="oval">
             <solid android:color="@color/shortcut_button" />
             <stroke
-                android:width="3dp"
+                android:width="2dp"
                 android:color="@color/shortcut_outline" />
         </shape>
     </item>
