@@ -22,9 +22,7 @@ class Shortcut(var selected: Boolean = false, var position: Int = 0) : Comparabl
         if (pkgId != other.pkgId) return false
         if (title != other.title) return false
         if (selected != other.selected) return false
-        if (position != other.position) return false
-
-        return true
+        return position == other.position
     }
 
     override fun hashCode(): Int {
