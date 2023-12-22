@@ -69,7 +69,7 @@ class ShortcutsRecyclerView(private val ctx: Context, attrs: AttributeSet?) :
             }
 
             val itemWidth = (parent.measuredWidth - parent.paddingLeft - parent.paddingRight) / 4
-            view.layoutParams.width = itemWidth - itemMargin - (itemMargin / itemsPerScreen)
+            view.layoutParams.width = itemWidth - itemMargin - (itemMargin / itemsPerScreen) + 2
         }
     }
 }
