@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Accent color -->
-    <color name="accent_color">#FFC1E8FF</color>
+    <color name="accent_color">@android:color/system_accent1_100</color>
 
     <!-- Background color -->
-    <color name="background_color">#FF161C20</color>
+    <color name="background_color">@android:color/system_neutral2_900</color>
 
     <!-- Dialog button color -->
-    <color name="background_pressed">#FF4E616C</color>
-    <color name="background_selected">#FF374955</color>
+    <color name="background_pressed">@android:color/system_accent2_600</color>
+    <color name="background_selected">@android:color/system_accent2_700</color>
 
     <!-- Shortcut background color -->
-    <color name="shortcut_button">#FF003549</color>
+    <color name="shortcut_button">@android:color/system_accent2_800</color>
 
     <!-- Shortcut outline background color -->
-    <color name="shortcut_outline">#00668B</color>
+    <color name="shortcut_outline">@android:color/system_accent2_700</color>
 </resources>

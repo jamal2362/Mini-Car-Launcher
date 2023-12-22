@@ -14,8 +14,7 @@ class ShortcutsViewAdapter(private val eventsListener: (ChangeEvent) -> Unit) :
     RecyclerView.Adapter<ShortcutsViewAdapter.Holder>(), MutableList<Shortcut> by ArrayList() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
-        val binding =
-            ElementAppShortcutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ElementAppShortcutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return Holder(binding)
     }
 

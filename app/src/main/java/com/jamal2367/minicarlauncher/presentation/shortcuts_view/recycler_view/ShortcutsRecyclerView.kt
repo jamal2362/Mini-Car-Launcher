@@ -5,6 +5,7 @@ import android.graphics.Rect
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.View
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -34,7 +35,7 @@ class ShortcutsRecyclerView(private val ctx: Context, attrs: AttributeSet?) :
             recycle()
         }
 
-        layoutManager = ShortcutsLayoutManager(ctx)
+        layoutManager = ShortcutsLayoutManager(ctx, 2)
         addItemDecoration(ShortcutsDecorator(itemsPerScreen, itemsMarginPx))
         setHasFixedSize(true)
     }
@@ -46,7 +47,7 @@ class ShortcutsRecyclerView(private val ctx: Context, attrs: AttributeSet?) :
 
     fun getItemsCountDesired(): Int = itemsPerScreen
 
-    private class ShortcutsLayoutManager(ctx: Context) : LinearLayoutManager(ctx) {
+    private class ShortcutsLayoutManager(ctx: Context, spanCount: Int) : GridLayoutManager(ctx, spanCount) {
         init {
             orientation = HORIZONTAL
         }

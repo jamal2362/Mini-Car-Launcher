@@ -2,6 +2,7 @@ package com.jamal2367.minicarlauncher.presentation.shortcuts_view
 
 import android.os.Bundle
 import android.view.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.ItemTouchHelper
 import com.google.android.material.snackbar.Snackbar
 import com.jamal2367.minicarlauncher.R
@@ -13,6 +14,11 @@ import com.jamal2367.minicarlauncher.presentation.shortcuts_view.recycler_view.S
 import com.jamal2367.minicarlauncher.presentation.shortcuts_view.recycler_view.ShortcutsViewAdapter
 import com.jamal2367.minicarlauncher.repository.entities.Shortcut
 import dagger.android.support.DaggerFragment
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
+import java.util.Timer
+import java.util.TimerTask
 import javax.inject.Inject
 
 class LauncherFragment : DaggerFragment(), LauncherView {
@@ -46,6 +52,8 @@ class LauncherFragment : DaggerFragment(), LauncherView {
         binding.rvAppsList.adapter = shortcutsViewAdapter
         ItemTouchHelper(ShortcutsTouchCallback(shortcutsViewAdapter::onItemMove))
             .attachToRecyclerView(binding.rvAppsList)
+
+        showCurrentTimeInActionBar()
     }
 
     override fun onResume() {
@@ -103,6 +111,19 @@ class LauncherFragment : DaggerFragment(), LauncherView {
         } else {
             presenter.onAppUnavailable(shortcut)
         }
+    }
+
+    private fun showCurrentTimeInActionBar() {
+        val timer = Timer()
+        timer.scheduleAtFixedRate(object : TimerTask() {
+            override fun run() {
+                val currentTime = System.currentTimeMillis()
+                val formattedTime = SimpleDateFormat("HH:mm", Locale.getDefault()).format(Date(currentTime))
+                activity?.runOnUiThread {
+                    (activity as? AppCompatActivity)?.supportActionBar?.title = formattedTime
+                }
+            }
+        }, 0, 1000)
     }
 
     override fun getShortcutsPerViewCount(): Int = binding.rvAppsList.getItemsCountDesired()

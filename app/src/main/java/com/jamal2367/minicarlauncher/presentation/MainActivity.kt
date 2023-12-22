@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.KeyEvent
+import androidx.appcompat.widget.Toolbar
 import androidx.databinding.DataBindingUtil
 import com.jamal2367.minicarlauncher.R
 import com.jamal2367.minicarlauncher.databinding.ActivityMainBinding
@@ -34,7 +35,9 @@ class MainActivity : DaggerAppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         setSupportActionBar(binding.tbToolbar)
-        supportActionBar?.setDisplayShowTitleEnabled(false)
+
+        val toolbar = findViewById<Toolbar>(R.id.tb_toolbar)
+        toolbar.setTitleTextAppearance(this, R.style.ToolbarTextAppearance)
 
         handleIntent(intent)
     }
@@ -58,7 +61,6 @@ class MainActivity : DaggerAppCompatActivity() {
         if (intent?.action == INTENT_SELF_TERMINATE) {
             disableDefaultLauncher()
             finish()
-
         } else {
             enableDefaultLauncher()
         }

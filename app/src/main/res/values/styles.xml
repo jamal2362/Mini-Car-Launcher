@@ -23,6 +23,10 @@
         <item name="android:foreground">?attr/selectableItemBackgroundBorderless</item>
     </style>
 
+    <style name="ToolbarTextAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textSize">40sp</item>
+    </style>
+
     <style name="TextMediumDialog">
         <item name="android:text">@android:string/untitled</item>
         <item name="android:textSize">18sp</item>
