@@ -77,14 +77,24 @@ class ShortcutsRecyclerView(private val ctx: Context, attrs: AttributeSet?) :
 }
 
 class ShortcutsTouchCallback(private val consumer: (Int, Int) -> Unit) :
-    ItemTouchHelper.SimpleCallback(ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT, 0) {
+    ItemTouchHelper.Callback() {
+
+    override fun getMovementFlags(
+        recyclerView: RecyclerView,
+        viewHolder: RecyclerView.ViewHolder
+    ): Int {
+        val dragFlags = ItemTouchHelper.UP or ItemTouchHelper.DOWN or
+                ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT
+        return makeMovementFlags(dragFlags, 0)
+    }
+
     override fun onMove(
         recyclerView: RecyclerView,
         srcHolder: RecyclerView.ViewHolder,
         targetHolder: RecyclerView.ViewHolder
     ): Boolean {
-        val sourcePosition = recyclerView.getChildAdapterPosition(srcHolder.itemView)
-        val targetPosition = recyclerView.getChildAdapterPosition(targetHolder.itemView)
+        val sourcePosition = srcHolder.adapterPosition
+        val targetPosition = targetHolder.adapterPosition
         consumer.invoke(sourcePosition, targetPosition)
         return true
     }
