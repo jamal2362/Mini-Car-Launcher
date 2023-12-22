@@ -63,9 +63,9 @@ class ShortcutsRecyclerView(private val ctx: Context, attrs: AttributeSet?) :
             outRect.apply {
                 if (parent.getChildAdapterPosition(view) < 0) {
                     left = itemMargin
+                    top = itemMargin
                 }
-
-                top = itemMargin
+                
                 right = itemMargin
                 bottom = itemMargin
             }
