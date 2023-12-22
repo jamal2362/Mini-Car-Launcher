@@ -3,6 +3,9 @@ package com.jamal2367.minicarlauncher.presentation.shortcuts_view
 import android.os.Bundle
 import android.view.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.MenuHost
+import androidx.core.view.MenuProvider
+import androidx.lifecycle.Lifecycle
 import androidx.recyclerview.widget.ItemTouchHelper
 import com.google.android.material.snackbar.Snackbar
 import com.jamal2367.minicarlauncher.R
@@ -41,8 +44,6 @@ class LauncherFragment : DaggerFragment(), LauncherView {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentShortcutsBinding.inflate(inflater, container, false)
-
-        setHasOptionsMenu(true)
         return binding.root
     }
 
@@ -54,6 +55,43 @@ class LauncherFragment : DaggerFragment(), LauncherView {
             .attachToRecyclerView(binding.rvAppsList)
 
         showCurrentTimeInActionBar()
+
+        // The usage of an interface lets you inject your own implementation
+        val menuHost: MenuHost = requireActivity()
+
+        menuHost.addMenuProvider(object : MenuProvider {
+            override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
+                // Add menu items here
+                menuInflater.inflate(R.menu.menu_shortcuts_main, menu)
+
+                for (i in 0 until menu.size()) {
+                    val menuItem = menu.getItem(i)
+                    menuItem.setOnMenuItemClickListener(NoDoubleClickGuard())
+                }
+            }
+
+            override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
+                return when (menuItem.itemId) {
+                    R.id.action_change_items -> {
+                        presenter.onShowAppsClick()
+                        true
+                    }
+                    R.id.action_open_assistant -> {
+                        presenter.onOpenAssistant(requireContext())
+                        true
+                    }
+                    R.id.action_open_settings -> {
+                        presenter.onOpenSettings(requireContext())
+                        true
+                    }
+                    R.id.action_web_search -> {
+                        presenter.onWebSearch(requireContext())
+                        true
+                    }
+                    else -> false
+                }
+            }
+        }, viewLifecycleOwner, Lifecycle.State.RESUMED)
     }
 
     override fun onResume() {
@@ -64,25 +102,6 @@ class LauncherFragment : DaggerFragment(), LauncherView {
     override fun onPause() {
         super.onPause()
         presenter.unbindView()
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.menu_shortcuts_main, menu)
-
-        for (i in 0 until menu.size()) {
-            val menuItem = menu.getItem(i)
-            menuItem.setOnMenuItemClickListener(NoDoubleClickGuard())
-        }
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.action_change_items -> presenter.onShowAppsClick()
-            R.id.action_open_assistant -> presenter.onOpenAssistant(requireContext())
-            R.id.action_open_settings -> presenter.onOpenSettings(requireContext())
-            R.id.action_web_search -> presenter.onWebSearch(requireContext())
-        }
-        return false
     }
 
     override fun setShortcuts(data: Collection<Shortcut>) {
