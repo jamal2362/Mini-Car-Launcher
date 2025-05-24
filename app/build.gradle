@@ -4,12 +4,12 @@ apply plugin: 'kotlin-android'
 
 android {
     namespace 'com.jamal2367.minicarlauncher'
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.jamal2367.minicarlauncher"
         minSdk 27
-        targetSdk 34
+        targetSdk 35
         versionCode 50
         versionName '5.0'
         resourceConfigurations += ['en', 'de']
@@ -49,7 +49,7 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 
     // Google Material //
-    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'com.google.android.material:material:1.12.0'
 
     // Google Dagger //
     implementation 'com.google.dagger:dagger-android-support:2.49'
@@ -57,8 +57,8 @@ dependencies {
     ksp "com.google.dagger:dagger-android-processor:2.49"
 
     // Android X //
-    implementation 'androidx.room:room-rxjava2:2.6.1'
-    ksp "androidx.room:room-compiler:2.6.1"
+    implementation 'androidx.room:room-rxjava2:2.7.1'
+    ksp "androidx.room:room-compiler:2.7.1"
 
     // RXJava2 //
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
