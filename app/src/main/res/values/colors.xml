@@ -18,10 +18,4 @@
 
     <!-- Text color -->
     <color name="text_color">#FF45464F</color>
-
-    <!-- Google Assistant color -->
-    <color name="google_blue">#FF4285F4</color>
-    <color name="google_green">#FF34A853</color>
-    <color name="google_red">#FFEA4335</color>
-    <color name="google_yellow">#FFFBBC05</color>
 </resources>

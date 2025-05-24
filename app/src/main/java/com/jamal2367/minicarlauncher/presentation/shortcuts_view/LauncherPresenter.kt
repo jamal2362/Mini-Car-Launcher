@@ -95,7 +95,7 @@ class LauncherPresenter
         context.startActivity(Intent(Settings.ACTION_SETTINGS))
     }
 
-    fun onOpenAssistant(context: Context) {
+    fun onOpenGemini(context: Context) {
         context.startActivity(Intent(Intent.ACTION_VOICE_COMMAND).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
     }
 

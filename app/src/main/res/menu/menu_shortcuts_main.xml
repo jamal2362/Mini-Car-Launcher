@@ -5,9 +5,9 @@
     tools:ignore="AlwaysShowAction">
 
     <item
-        android:id="@+id/action_open_assistant"
-        android:icon="@drawable/ic_assistant_oval"
-        android:title="@string/menu_open_assistant"
+        android:id="@+id/action_open_gemini"
+        android:icon="@drawable/ic_gemini_oval"
+        android:title="@string/menu_open_gemini"
         app:showAsAction="always" />
 
     <item

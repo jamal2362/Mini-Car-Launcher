@@ -23,6 +23,8 @@ import java.util.Locale
 import java.util.Timer
 import java.util.TimerTask
 import javax.inject.Inject
+import androidx.core.view.size
+import androidx.core.view.get
 
 class LauncherFragment : DaggerFragment(), LauncherView {
 
@@ -64,8 +66,8 @@ class LauncherFragment : DaggerFragment(), LauncherView {
                 // Add menu items here
                 menuInflater.inflate(R.menu.menu_shortcuts_main, menu)
 
-                for (i in 0 until menu.size()) {
-                    val menuItem = menu.getItem(i)
+                for (i in 0 until menu.size) {
+                    val menuItem = menu[i]
                     menuItem.setOnMenuItemClickListener(NoDoubleClickGuard())
                 }
             }
@@ -76,8 +78,8 @@ class LauncherFragment : DaggerFragment(), LauncherView {
                         presenter.onShowAppsClick()
                         true
                     }
-                    R.id.action_open_assistant -> {
-                        presenter.onOpenAssistant(requireContext())
+                    R.id.action_open_gemini -> {
+                        presenter.onOpenGemini(requireContext())
                         true
                     }
                     R.id.action_open_settings -> {
@@ -134,7 +136,7 @@ class LauncherFragment : DaggerFragment(), LauncherView {
 
     private fun showCurrentTimeInActionBar() {
         val timer = Timer()
-        timer.scheduleAtFixedRate(object : TimerTask() {
+        timer.schedule(object : TimerTask() {
             override fun run() {
                 val currentTime = System.currentTimeMillis()
                 val formattedTime = SimpleDateFormat("HH:mm", Locale.getDefault()).format(Date(currentTime))

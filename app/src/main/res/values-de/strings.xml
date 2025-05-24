@@ -5,7 +5,7 @@
 
     <!-- Menu Items -->
     <string name="menu_open_applications">Anwendungen</string>
-    <string name="menu_open_assistant">Google Assistant</string>
+    <string name="menu_open_gemini">Gemini</string>
     <string name="menu_open_settings">Systemeinstellungen</string>
     <string name="menu_open_web_search">Websuche</string>
 

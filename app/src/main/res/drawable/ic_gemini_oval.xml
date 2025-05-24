@@ -10,7 +10,7 @@
 
     <item
         android:bottom="6dp"
-        android:drawable="@drawable/ic_assistant"
+        android:drawable="@drawable/ic_gemini"
         android:left="6dp"
         android:right="6dp"
         android:top="6dp" />
